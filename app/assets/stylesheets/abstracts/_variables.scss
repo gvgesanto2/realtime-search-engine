@@ -1,0 +1,55 @@
+:root {
+  // Color Pallete
+  --color-primary-300: #9bc93e;
+  --color-grey-100: #f4f4f4;
+  --color-grey-150: #f0f2f5;
+  --color-grey-200: #eff3f4;
+  --color-grey-300: #ced0d4;
+  --color-grey-600: #65676b;
+  --color-grey-950: #0f0f0f;
+  --color-black: #000;
+  --color-white: #fff;
+
+  // Other color variables
+  --color-primary: var(--color-primary-300);
+  --color-text-primary: var(--color-grey-950);
+  --color-text-secondary: var(--color-grey-600);
+  --color-body-bg: var(--color-grey-150);
+  --color-cards-bg: var(--color-white);
+
+  // Header
+  --header-height: 6rem;
+
+  //  Border-radius
+  --border-radius: 0.8rem;
+
+   // Box shadows
+   --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.1);
+   --shadow-2: 0 1px 2px rgba(0, 0, 0, 0.2);
+   --shadow-cards: var(--shadow-2);
+
+  // Separator lines
+  --separator-line-1: 1px solid rgba(0, 0, 0, 0.1);
+
+  // Main Container
+  --main-container-max-width: 160rem;
+}
+
+// Breakpoints
+$breakpoints: (
+  // 23.4375em = 375px
+  'screen-sm': 23.4375em,
+  // 48em = 768px
+  'screen-md': 48em,
+  // 64em = 1024px
+  'screen-lg': 64em,
+  // 90em = 1440px
+  'screen-xlg': 90em,
+  // 160em = 2560px
+  'screen-hg': 160em
+);
+
+$bp-types: (
+  'max': max-width,
+  'min': min-width,
+);

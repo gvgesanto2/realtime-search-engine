@@ -1,0 +1,16 @@
+// Import variables and mixins
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Import reset and base styles
+@import 'base/reset';
+@import 'base/base';
+
+@import 'components/c-article-preview';
+@import 'components/c-articles-list';
+@import 'components/c-search-bar';
+@import 'components/c-icon';
+
+// Import layout styles
+@import 'layout/l-main';
+@import 'layout/l-section';

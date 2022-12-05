@@ -1,0 +1,15 @@
+<% preview_limit = 250 %>
+
+<article class="c-article-preview">
+  <header class="c-article-preview__header">
+    <h2 class="c-article-preview__title">
+      <%= article.title %>
+    </h2>
+    <p class="c-article-preview__info">
+      <%= "by #{article.user.name} on #{article.created_at.strftime("%m/%d/%Y")}" %>
+    </p>
+  </header>
+  <p class="c-article-preview__body">
+    <%= article.body.length > preview_limit ? "#{article.body[0..preview_limit]}..." : article.body %>
+  </p>
+</article>
