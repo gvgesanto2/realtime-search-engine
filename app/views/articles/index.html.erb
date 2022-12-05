@@ -1,0 +1,13 @@
+<%= form_with(url: articles_path, method: :get, data: {controller: "search-form", turbo_frame: "articles", turbo_action: "advance"}) do |form| %>
+  <%= form.text_field :query, 
+    placeholder: "Search for the article title...",
+    autocomplete: "off",
+    data: {action: "input->search-form#search"} 
+  %>
+
+  <%= form.submit 'Search' %>
+<% end %>
+
+<div class="articles">
+  <%= render "articles", articles: @articles %>
+</div>
