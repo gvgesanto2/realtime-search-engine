@@ -77,3 +77,5 @@ gem "devise", "~> 4.8"
 gem "faker", "~> 3.0"
 
 gem "pg_search", "~> 2.3"
+
+gem "will_paginate", "~> 3.3"
