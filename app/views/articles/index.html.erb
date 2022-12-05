@@ -5,6 +5,8 @@
     data: {action: "input->search-form#search"} 
   %>
 
+  <%= form.hidden_field :confirmed, id: "confirmed-input", value: nil %>
+
   <%= form.submit 'Search' %>
 <% end %>
 

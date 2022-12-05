@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_04_210350) do
   create_table "searches", force: :cascade do |t|
     t.string "query", null: false
     t.bigint "user_id", null: false
+    t.boolean "confirmed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_searches_on_user_id"

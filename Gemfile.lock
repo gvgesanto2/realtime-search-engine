@@ -108,6 +108,7 @@ GEM
     io-console (0.5.11)
     irb (1.4.2)
       reline (>= 0.3.0)
+    jaro_winkler (1.5.4)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -245,6 +246,7 @@ DEPENDENCIES
   devise (~> 4.8)
   faker (~> 3.0)
   importmap-rails
+  jaro_winkler (~> 1.5)
   jbuilder
   pg (~> 1.1)
   pg_search (~> 2.3)

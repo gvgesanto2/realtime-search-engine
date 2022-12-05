@@ -79,3 +79,5 @@ gem "faker", "~> 3.0"
 gem "pg_search", "~> 2.3"
 
 gem "will_paginate", "~> 3.3"
+
+gem "jaro_winkler", "~> 1.5"
