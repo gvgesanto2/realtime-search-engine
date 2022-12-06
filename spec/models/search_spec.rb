@@ -9,7 +9,7 @@ RSpec.describe Search, type: :model do
     )
 
     Search.new(
-      query: "hello world",
+      query: 'hello world',
       user: fake_user
     )
   end

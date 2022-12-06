@@ -6,9 +6,9 @@ users = [
 ]
 
 users.each do |user|
-  20.times do
+  25.times do
     Article.create!(
-      title: Faker::Movie.title,
+      title: Faker::Movie.unique.title,
       body: Faker::Lorem.paragraph_by_chars(number: 250),
       user:
     )

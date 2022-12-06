@@ -13,7 +13,7 @@ RSpec.describe Article, type: :model do
     )
 
     Article.new(
-      title: "Some title",
+      title: 'Some title',
       body: Faker::Lorem.paragraph_by_chars(number: @min_body_length),
       user: fake_user
     )
@@ -30,7 +30,7 @@ RSpec.describe Article, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "should NOT be valid with a title longer than 100 characters" do
+  it 'should NOT be valid with a title longer than 100 characters' do
     subject.title = Faker::Lorem.paragraph_by_chars(number: @max_title_length + 1)
     expect(subject).to_not be_valid
   end
@@ -40,12 +40,12 @@ RSpec.describe Article, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "should NOT be valid with a body shorter than 50 characters" do
+  it 'should NOT be valid with a body shorter than 50 characters' do
     subject.body = Faker::Lorem.paragraph_by_chars(number: @min_body_length - 1)
     expect(subject).to_not be_valid
   end
 
-  it "should NOT be valid with a body longer than 5000 characters" do
+  it 'should NOT be valid with a body longer than 5000 characters' do
     subject.body = Faker::Lorem.paragraph_by_chars(number: @max_body_length + 1)
     expect(subject).to_not be_valid
   end

@@ -22,7 +22,7 @@ RSpec.describe User, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "should NOT be valid with a name longer than 100 characters" do
+  it 'should NOT be valid with a name longer than 100 characters' do
     subject.name = Faker::Lorem.paragraph_by_chars(number: @max_name_length + 1)
     expect(subject).to_not be_valid
   end

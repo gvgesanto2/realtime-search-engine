@@ -1,7 +1,9 @@
 .c-search-bar {
   max-width: 40rem;
   flex: 0 0 100%;
+
   @include centerWithFlex;
+
   background: transparent;
 
   &__input {

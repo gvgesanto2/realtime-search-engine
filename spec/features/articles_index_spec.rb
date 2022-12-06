@@ -23,31 +23,31 @@ RSpec.describe 'Articles page', type: :feature do
   it 'should have the title Articles' do
     sign_in @fake_user
     visit articles_path
-    
+
     expect(page).to have_content('Articles')
   end
 
   it 'should display an empty message if there are no articles' do
     sign_in @fake_user
     visit articles_path
-    
+
     expect(page).to have_content('No articles')
   end
 
   it 'should have a search bar' do
     sign_in @fake_user
     visit articles_path
-    
+
     expect(page).to have_field('Search articles...')
     expect(page).to have_field('query')
   end
 
   it 'should have 5 visible articles' do
     @num_articles = 5
-    
+
     titles = []
     body_texts = []
-    
+
     @num_articles.times do |i|
       title = "Some title - #{i}"
       body = "#{Faker::Lorem.paragraph_by_chars(number: 50)} - #{i}"

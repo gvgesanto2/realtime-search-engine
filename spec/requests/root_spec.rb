@@ -2,15 +2,15 @@ require 'rails_helper'
 
 RSpec.describe 'Root', type: :request do
   describe 'GET /' do
-    before(:each) { 
+    before(:each) do
       @fake_user = User.create(
         name: 'Mr Test',
         email: 'test@test.com',
         password: '123123'
       )
       sign_in @fake_user
-      get '/' 
-    }
+      get '/'
+    end
 
     it 'returns an http success response' do
       expect(response).to have_http_status(:success)

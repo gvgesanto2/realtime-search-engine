@@ -9,7 +9,7 @@ RSpec.describe 'Articles', type: :request do
         password: '123123'
       )
       sign_in @fake_user
-      get '/articles' 
+      get '/articles'
     end
 
     it 'returns an http success response' do

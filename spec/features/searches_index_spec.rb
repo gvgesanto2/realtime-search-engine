@@ -23,29 +23,29 @@ RSpec.describe 'Searches page', type: :feature do
   it 'should have the title 0 Searches when the user has no searches' do
     sign_in @fake_user
     visit searches_path
-    
+
     expect(page).to have_content('0 Searches')
   end
 
   it 'should display an empty message when the user has no searches' do
     sign_in @fake_user
     visit searches_path
-    
+
     expect(page).to have_content('No searches')
   end
 
   it 'should display 5 searches' do
     @num_searches = 5
     @num_occurrences = 3
-    
+
     queries = []
-    
+
     @num_occurrences.times do
       @num_searches.times do |i|
         query = "query - #{i}"
-  
+
         queries.push(query)
-  
+
         Search.create(
           query:,
           user: @fake_user
@@ -57,7 +57,7 @@ RSpec.describe 'Searches page', type: :feature do
     visit searches_path
 
     expect(page).to have_content(@num_occurrences)
-    
+
     queries.each do |query|
       expect(page).to have_content(query)
     end
