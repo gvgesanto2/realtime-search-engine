@@ -1,2 +1,17 @@
-<h1>Hi</h1>
-<p><%= @user_searches %></p>
+<section class="l-section">
+  <header class="l-section__header">
+    <h1 class="l-section__title">
+      <%= pluralize(@user_searches.length, 'Search') %>
+    </h1>
+  </header>
+
+  <div class="l-section__content">
+    <ul class="c-vertical-list">
+      <% @user_searches.entries.each do |title, count| %>
+        <li>
+          <%= render "search_item", search: {title:, count:} %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
