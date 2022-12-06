@@ -1,10 +1,13 @@
 :root {
   // Color Pallete
   --color-primary-300: #9bc93e;
-  --color-grey-100: #f4f4f4;
+  --color-grey-100: #f4f2f2;
   --color-grey-150: #f0f2f5;
-  --color-grey-200: #eff3f4;
-  --color-grey-300: #ced0d4;
+  --color-grey-175: #f0eeee;
+  --color-grey-200: #e7e9ee;
+  --color-grey-250: #d7d7d7;
+  --color-grey-300: #ccc;
+  --color-grey-400: #999;
   --color-grey-600: #65676b;
   --color-grey-950: #0f0f0f;
   --color-black: #000;
@@ -37,16 +40,7 @@
 
 // Breakpoints
 $breakpoints: (
-  // 23.4375em = 375px
-  'screen-sm': 23.4375em,
-  // 48em = 768px
   'screen-md': 48em,
-  // 64em = 1024px
-  'screen-lg': 64em,
-  // 90em = 1440px
-  'screen-xlg': 90em,
-  // 160em = 2560px
-  'screen-hg': 160em
 );
 
 $bp-types: (

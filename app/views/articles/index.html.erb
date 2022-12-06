@@ -30,7 +30,9 @@
   <div class="l-section__content">
     <%= render "articles", articles: @articles %>
 
-    <%= will_paginate @articles %>
+    <div class="l-section__pagination">
+      <%= will_paginate @articles %>
+    </div>
   </div>
 </section>
 

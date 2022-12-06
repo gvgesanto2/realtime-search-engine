@@ -7,10 +7,16 @@
 
   <div class="l-section__content">
     <ul class="c-vertical-list">
-      <% @user_searches.entries.each do |title, count| %>
-        <li>
-          <%= render "search_item", search: {title:, count:} %>
-        </li>
+      <% if @user_searches.empty? %>
+        <p class="l-section__empty">
+          &mdash;&nbsp; No searches &nbsp;&mdash;
+        </p>
+      <% else %>
+        <% @user_searches.entries.each do |title, count| %>
+          <li>
+            <%= render "search_item", search: {title:, count:} %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>

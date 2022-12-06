@@ -8,7 +8,7 @@
     font-family: inherit;
     font-size: inherit;
     color: inherit;
-    background: #f4f2f2;
+    background: var(--color-grey-100);
     border: none;
     padding: 0.7rem 5rem 0.7rem 2rem;
     border-radius: 100px;
@@ -18,7 +18,7 @@
 
     &::-webkit-input-placeholder {
       font-weight: 100;
-      color: #ccc;
+      color: var(--color-grey-300);
     }
 
     &:focus {
@@ -27,15 +27,15 @@
   }
 
   &__input:focus + &__button {
-    background: #f0eeee;
+    background: var(--color-grey-175);
   }
 
   &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #999;
-    background: #f4f2f2;
+    color: var(--color-grey-400);
+    background: var(--color-grey-100);
     border: none;
     cursor: pointer;
 

@@ -20,16 +20,15 @@ class ArticlesController < ApplicationController
 
   def create_search(query, user_id)
     return unless query.present? && query.length >= 3
-    # return unless params[:stopped].present? || params[:commit].present? 
-    
-    recent_user_search = Search.where(user_id:, confirmed: false).last
+     
+    last_unconfirmed_search = Search.where(user_id:, confirmed: false).last
 
-    if recent_user_search && params[:confirmed].present?
-      recent_user_search.update(confirmed: true)
+    if last_unconfirmed_search && params[:confirmed].present?
+      last_unconfirmed_search.update(confirmed: true)
     end 
  
-    if recent_user_search && similar_strings?(query, recent_user_search.query)
-      recent_user_search.update(query:)
+    if last_unconfirmed_search && similar_strings?(query, last_unconfirmed_search.query)
+      last_unconfirmed_search.update(query:)
     else
       Search.create(query:, user_id:)
     end

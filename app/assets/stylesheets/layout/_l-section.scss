@@ -27,4 +27,16 @@
       border-radius: 100px;
     }
   }
+
+  &__empty {
+    font-weight: 1.6rem;
+    font-weight: 600;
+
+    text-align: center;
+  }
+
+  &__pagination {
+    @include centerWithFlex;
+    margin-top: 3.2rem;
+  }
 }

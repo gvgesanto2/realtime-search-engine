@@ -1,9 +1,15 @@
 <%= turbo_frame_tag "articles" do %>
-  <ul class="c-vertical-list">
-    <% articles.each do |article| %>
-      <li>
-        <%= render "article_preview", article: article %>
-      </li>
-    <% end %>
-  </ul>
+  <% if articles.empty? %>
+    <p class="l-section__empty">
+      &mdash;&nbsp; No articles &nbsp;&mdash;
+    </p>
+  <% else %>
+    <ul class="c-vertical-list">
+      <% articles.each do |article| %>
+        <li>
+          <%= render "article_preview", article: article %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
 <% end %>
