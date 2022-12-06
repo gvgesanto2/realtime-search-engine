@@ -1,0 +1,58 @@
+.c-form {
+  max-width: 57.6rem;
+  text-align: center;
+  background-color: var(--color-cards-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-cards);
+  padding: 2.4rem;
+  margin: 0 auto;
+
+  &__input-group {
+    margin-bottom: 2.4rem;
+  }
+
+  &__action > *:not(:last-child),
+  &__input-group > *:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.1rem;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 1.8rem 1.2rem 1.7rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      opacity: 0.95;
+    }
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+  }
+
+  &__link {
+    transition: all 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

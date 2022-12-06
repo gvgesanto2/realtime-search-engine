@@ -1,0 +1,26 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: search_engine_db_dev
+  username: docker
+  password: docker
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: search_engine_db_test
+  username: docker
+  password: docker
+  host: localhost
+  port: 5432
+
+production:
+  <<: *default
+  database: realtime_search_engine_production
+  username: realtime_search_engine
+  password: <%= ENV["REALTIME_SEARCH_ENGINE_DATABASE_PASSWORD"] %>

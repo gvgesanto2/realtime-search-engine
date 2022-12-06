@@ -1,0 +1,40 @@
+<section class="l-section">
+  <header class="l-section__header">
+    <h1 class="l-section__title">
+      Articles
+    </h1>
+    <%= form_with(url: articles_path, method: :get, data: {controller: "search-form", turbo_frame: "articles", turbo_action: "advance"}, class: "c-search-bar") do |form| %>
+      <%= form.text_field :query, 
+        class: "c-search-bar__input",
+        placeholder: "Search articles...",
+        autocomplete: "off",
+        data: {action: "input->search-form#search"} 
+      %>
+
+      <%= form.hidden_field :confirmed, 
+        id: "confirmed-input", 
+        value: nil 
+      %>
+
+      <%= form.button nil, 
+        name: "commit", 
+        value: "commit", 
+        class: "c-search-bar__btn" do %>
+        <svg class="c-icon--sm">
+          <use xlink:href=<%= image_url("icons/sprite.svg#search")%>></use>
+        </svg>
+      <% end %> 
+    <% end %>
+  </header>
+
+  <div class="l-section__content">
+    <%= render "articles", articles: @articles %>
+
+    <div class="l-section__pagination">
+      <%= will_paginate @articles %>
+    </div>
+  </div>
+</section>
+
+
+

@@ -1,0 +1,52 @@
+.c-search-bar {
+  max-width: 40rem;
+  flex: 0 0 100%;
+
+  @include centerWithFlex;
+
+  background: transparent;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: var(--color-grey-100);
+    border: none;
+    padding: 0.7rem 5rem 0.7rem 2rem;
+    border-radius: 100px;
+    width: 95%;
+    margin-right: -3.5rem;
+    transition: all 0.2s;
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-300);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input:focus + &__button {
+    background: var(--color-grey-175);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-grey-400);
+    background: var(--color-grey-100);
+    border: none;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+}
