@@ -27,6 +27,13 @@ RSpec.describe 'Articles page', type: :feature do
     expect(page).to have_content('Articles')
   end
 
+  it 'should display an empty message if there are no articles' do
+    sign_in @fake_user
+    visit articles_path
+    
+    expect(page).to have_content('No articles')
+  end
+
   it 'should have a search bar' do
     sign_in @fake_user
     visit articles_path

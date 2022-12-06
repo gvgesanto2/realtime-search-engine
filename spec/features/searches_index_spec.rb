@@ -27,6 +27,13 @@ RSpec.describe 'Searches page', type: :feature do
     expect(page).to have_content('0 Searches')
   end
 
+  it 'should display an empty message when the user has no searches' do
+    sign_in @fake_user
+    visit searches_path
+    
+    expect(page).to have_content('No searches')
+  end
+
   it 'should display 5 searches' do
     @num_searches = 5
     @num_occurrences = 3
